@@ -1,4 +1,5 @@
+const createError = require('http-errors');
+
 module.exports = (req, res, next) => {
-    res.status(404);
-    next();
+    next(createError(404));
 };
