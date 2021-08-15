@@ -10,7 +10,7 @@ console.log(VIDEO_PATH_FOLDER)
 
 const getFiles = async (req, res) => {
     const files = await readDirPromise(VIDEO_PATH_FOLDER);
-    logger.debug(files);
+    logger.debug("Files", { files });
     res.json(files);
 };
 
